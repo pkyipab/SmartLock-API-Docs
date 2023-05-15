@@ -348,6 +348,28 @@ Response (if success):
 }
 ```
 
+### B6. deleteDeviceSNBybtMacAddress<br> 
+- URL : https://api-smartlock.woowmoment.com/api/deviceSN/deleteDeviceSNBybtMacAddress<br>
+- Accept: application/json OR x-www-form-urlencoded
+- Method : POST<br>
+- Body Example: 
+```sql
+btMacAddress TEXT NOT NULL 
+```
+- Response:
+```
+BOOLEAN
+```
+Response (if success):
+```jsx
+{
+    "status": 0,
+    "message": "success",
+    "data": true
+}
+```
+
+
 ## C.devices
 
 ### C1. create<br> 
