@@ -65,6 +65,7 @@ $ firebase deploy --only functions --debug
 email TEXT NOT NULL
 password TEXT NOT NULL
 name TEXT NOT NULL
+companyId TEXT COMMENT 'if null -> create a company User with his own UID, otherwise add the company's UID to the new user'
 ```
 Response Type:
 ```
@@ -107,6 +108,26 @@ Response (if success):
 
 #Reference: ``addOrEditerUser``, ``createUser``
 
+### Au3. deleteUserByUserId (Create User With Firebase Auth, and store user in DB) <br> 
+- URL : https://api-smartlock.woowmoment.com/api/auth/deleteUserByUserId<br>
+- Accept: application/json
+- Method : POST<br>
+- Body Example: 
+```sql
+userId TEXT NOT NULL
+```
+Response Type:
+```
+BOOLEAN
+```
+Response (if success):
+```jsx
+{
+    "status": 0,
+    "message": "success",
+    "data": true
+}
+```
 
 ## A.addDevices
 
@@ -1264,6 +1285,7 @@ Response (if success):
       },
       lastUpdatedTime: 0,
       btMacAddress: "1234",
+      documentId: "2WwtrxauXeYQRq7KLue32320"
     },
   ],
 }
@@ -1271,40 +1293,7 @@ Response (if success):
 
 #Reference: ``getMyDeviceForCloudFirestore``, ``getMyDeviceForCloudFirestoreNotify``
 
-### I14. getUserDevices<br> 
-- URL : https://api-smartlock.woowmoment.com/api/users/getUserDevices<br>
-- Accept: application/json
-- Method : POST<br>
-- Body: 
-```sql
-userId TEXT NOT NULL
-```
-Response Type:
-```
-List<UserDevice> 
-```
-Response (if success):
-```jsx
-{
-  status: 0,
-  message: "success",
-  data: [
-    {
-      userSettingName: "bg-123",
-      createTime: 0,
-      friendMap: {
-        test: 123,
-      },
-      lastUpdatedTime: 0,
-      btMacAddress: "1234",
-    },
-  ],
-}
-```
-
-#Reference: ``getMyDeviceForCloudFirestore``, ``getMyDeviceForCloudFirestoreNotify``
-
-### I15. updateUserSortType<br> 
+### I14. updateUserSortType<br> 
 - URL : https://api-smartlock.woowmoment.com/api/users/updateUserSortType<br>
 - Accept: application/json
 - Method : POST<br>
@@ -1324,7 +1313,7 @@ Response (if success):
 
 #Reference: ``editerUserHomePageSortType``
 
-### I16. getUserDeviceByMacAddress<br> 
+### I15. getUserDeviceByMacAddress<br> 
 - URL : https://api-smartlock.woowmoment.com/api/users/getUserDeviceByMacAddress<br>
 - Accept: application/json
 - Method : POST<br>
