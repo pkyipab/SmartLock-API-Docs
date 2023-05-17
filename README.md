@@ -1,6 +1,14 @@
 <h2 align="center">SmartLock API Docs</h2>
 
-Last Update : 2023-05-12
+Last Updates : 2023-05-18
+```diff
++ Added Au3.deleteUserByUserId
++ Added I16.updateUserCompanyId
++ Added Cloud Function (6) onShareDeviceDeleteTrigger for removing in `users` -> `devices` -> `friendMap`. Excute when `shareDevices` Object deleted.
+
+! Modified Au1.createUserByEmailAndPassword : allows insert companyId when creation. 
+! Modified I13.getUserDevices : returns `documentId` (i.e. device's id)
+```
 
 # Authentication [Important]
 Please note that our private APIs are specifically designed for internal or authorized use only. As such, the 'Authorization' header is a mandatory requirement to maintain the security and privacy of our sensitive data and functionality. It prevents unauthorized access and ensures that our APIs are utilized exclusively by approved users.
@@ -47,6 +55,11 @@ These Cloud Functions are designed to handle various triggers and events within 
 ### 5. onShareDeviceCreateTrigger<br>
 - Trigger: onCreate event of the Firestore document "shareDevices/{docId}"
 - Description: Handles the creation of a shared device and updates the user's device information.
+
+### 6. onShareDeviceDeleteTrigger<br>
+- Trigger: onDelete event of the Firestore document "shareDevices/{docId}"
+- Description: Handles the deletion of a shared device and updates the user's device (friendMap) information.
+
 
 ### Command for deploying cloud functions
 
@@ -1346,6 +1359,28 @@ Response (if success):
 ```
 
 #Reference: ``getMyDeviceWhereEquaToMacAddress``
+
+### I16. updateUserCompanyId<br> 
+- URL : https://api-smartlock.woowmoment.com/api/users/updateUserCompanyId<br>
+- Accept: application/json
+- Method : POST<br>
+- Body: 
+```sql
+userId TEXT NOT NULL
+companyId TEXT NOT NULL
+```
+Response Type:
+```
+Boolean
+```
+Response (if success):
+```jsx
+{
+  status: 0,
+  message: "success",
+  data: true,
+}
+```
 
 ## Status
 
