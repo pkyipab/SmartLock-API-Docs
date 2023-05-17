@@ -65,7 +65,7 @@ $ firebase deploy --only functions --debug
 email TEXT NOT NULL
 password TEXT NOT NULL
 name TEXT NOT NULL
-companyId TEXT COMMENT 'if null -> create a company User with his own UID, otherwise add the company's UID to the new user'
+companyId TEXT COMMENT 'Refers to company owner uid : if null -> create a company User with his own UID, otherwise add the company's UID to the new user'
 ```
 Response Type:
 ```
