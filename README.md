@@ -108,7 +108,7 @@ Response (if success):
 
 #Reference: ``addOrEditerUser``, ``createUser``
 
-### Au3. deleteUserByUserId (Create User With Firebase Auth, and store user in DB) <br> 
+### Au3. deleteUserByUserId <br> 
 - URL : https://api-smartlock.woowmoment.com/api/auth/deleteUserByUserId<br>
 - Accept: application/json
 - Method : POST<br>
