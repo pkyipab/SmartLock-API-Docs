@@ -226,7 +226,7 @@ Response (if success):
         "defaultkey": "5788F13A4914DFDBD31CCF5FAA173096",
         "token": null,
         "userkey": null,
-        "companyID": "A01",
+        "companyId": "A01",
         "qrCode": "002C0C9CCF697248D940D20C0B0ED576F851B27159D6B136",
         "imei": null,
         "btMacAddress": "F4:04:4C:18:10:EA",
@@ -259,7 +259,7 @@ Response (if success):
         "defaultkey": "5788F13A4914DFDBD31CCF5FAA173096",
         "token": null,
         "userkey": null,
-        "companyID": "A01",
+        "companyId": "A01",
         "qrCode": "002C0C9CCF697248D940D20C0B0ED576F851B27159D6B136",
         "imei": null,
         "btMacAddress": "F4:04:4C:18:10:EA",
@@ -279,7 +279,6 @@ Response (if success):
 type deviceSNSchema = {
   adminKey: string;
   btMacAddress: string;
-  companyID: string;
   defaultKey: string;
   imei: string;
   manufacturerDate: string;
@@ -330,7 +329,7 @@ Response (if success):
       defaultkey: "5788F13A4914DFDBD31CCF5FAA173096",
       token: null,
       userkey: null,
-      companyID: "A01",
+      companyId: "A01",
       qrCode: "002C0C9CCF697248D940D20C0B0ED576F851B27159D6B136",
       imei: null,
       btMacAddress: "F4:04:4C:18:10:EA",
@@ -370,7 +369,7 @@ Response (if success):
           defaultkey: "5788F13A4914DFDBD31CCF5FAA173096",
           token: null,
           userkey: null,
-          companyID: "A01",
+          companyId: "A01",
           qrCode: "002C0C9CCF697248D940D20C0B0ED576F851B27159D6B136",
           imei: null,
           btMacAddress: "F4:04:4C:18:10:EA",
