@@ -945,6 +945,62 @@ Response (if success):
 
 #Reference: ``shareDevice``
 
+### G7. getShareDevicesBybtMacAddress<br> 
+- URL : https://api-smartlock.woowmoment.com/api/shareDevices/getShareDevicesBybtMacAddress<br>
+- Accept: application/json
+- Method : POST<br>
+- Body Example: 
+```sql
+btMacAddress TEXT NOT NULL
+```
+Response (if success):
+```jsx
+{
+    "status": 0,
+    "message": "success",
+    "data": [
+        {
+            "lastScanTime": 0,
+            "note": "this is app share lock",
+            "latitude": 0,
+            "companyName": null,
+            "placeAddress": null,
+            "endData": "2023-05-31",
+            "nicMacAddress": null,
+            "imageL": null,
+            "ownerId": "SkyBOGreX9f7qhWDXteVr6U5YuL2",
+            "stratTime": "12:00:00",
+            "type": "lock",
+            "deviceName": "1810b7",
+            "companyID": "SkyBOGreX9f7qhWDXteVr6U5YuL2",
+            "dataBaseId": null,
+            "from": "ivorlaikawai@gmail.com",
+            "btMacAddress": "F4:04:4C:18:10:B7",
+            "map": null,
+            "email": "ivorlaikawai+3@gmail.com",
+            "longitude": 0,
+            "image": null,
+            "rssi": null,
+            "locationName": null,
+            "canShowMap": true,
+            "userDeviceId": "MUfNy3UZeeJ4ni74zPVA",
+            "userKey": "5zg5MTJHMBWtUSlb",
+            "registrationToken": "ce-Mj7dTQleKPtFuZZDFZH:APA91bEKrTVAYVf-9YD6oMlvjQUeYIHax-bn3gqj1Xz7i3YdywCNFZs_Og0bKiNMIANWxy7SWEibtmMLeY78e3wEg-58X87yDjdyBlVkINgk0D_yJ142OmyPqsXPZ-V63jZ4qqvw6MuB",
+            "guest": null,
+            "endTime": "12:00:00",
+            "stratData": "2023-05-01",
+            "accessDays": [
+                "Monday",
+                "Friday"
+            ],
+            "isChange": false,
+            "msd": null,
+            "documentId": "CdN3zm2j3fPuEauc4u67"
+        },
+    ]
+}
+```
+
 ## H.userOpenID
 
 ### H1. getUserOpenIdByUserId<br> 
