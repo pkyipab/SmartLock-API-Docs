@@ -1,5 +1,15 @@
 <h2 align="center">SmartLock API Docs</h2>
 
+Last Updates : 2023-05-24
+```diff
+! For below functions, SuperAdmin can fetch all, Company User can only fetch their own data. 
+
++ Added I17. getUserByEmail
++ Added G7. getShareDevicesBybtMacAddress
++ Added B7. getAllDeviceSN
++ Added B8. getAllDeviceSNCount
+```
+
 Last Updates : 2023-05-18
 ```diff
 + Added Au3.deleteUserByUserId
