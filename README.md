@@ -1381,6 +1381,48 @@ Response (if success):
 }
 ```
 
+### I17. getUserByEmail<br> 
+- URL : https://api-smartlock.woowmoment.com/api/users/getUserByEmail<br>
+- Accept: application/json 
+- Method : POST<br>
+- Body: 
+```sql
+email TEXT NOT NULL
+```
+Response (if success):
+```jsx
+{
+  status: 0,
+  message: "success",
+  data: [
+    {
+            "image": null,
+            "devices": null,
+            "loginType": "email",
+            "keys": null,
+            "openID": 187,
+            "jurisdiction": null,
+            "uid": "COMPANY_ID",
+            "registrationToken": "1234",
+            "sortType": 0,
+            "shareDevices": null,
+            "kye": [],
+            "shareDeviceList": null,
+            "deviceList": null,
+            "pwd": null,
+            "age": null,
+            "email": "USER_EMAIL",
+            "key": null,
+            "gropingRooms": null,
+            "companyID": "COMPANY_ID",
+            "companyName": "USER_COMPANY_NAME",
+            "name": "USER_NAME",
+            "documentId": "USER_UID"
+        }
+    ]
+}
+```
+
 ## Status
 
 ### health<br> 
