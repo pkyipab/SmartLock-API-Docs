@@ -1,5 +1,12 @@
 <h2 align="center">SmartLock API Docs</h2>
 
+Last Updates : 2023-05-25
+```diff
++ Added Au4. resetPassword
++ Added Au5. enableUser
++ Added Au6. disableUser
+```
+
 Last Updates : 2023-05-24
 ```diff
 ! For below functions, SuperAdmin can fetch all, Company User can only fetch their own data. 
@@ -138,6 +145,69 @@ Response (if success):
 - Body Example: 
 ```sql
 userId TEXT NOT NULL
+```
+Response Type:
+```
+BOOLEAN
+```
+Response (if success):
+```jsx
+{
+    "status": 0,
+    "message": "success",
+    "data": true
+}
+```
+
+### Au4. resetPassword <br> 
+- URL : https://api-smartlock.woowmoment.com/api/auth/resetPassword<br>
+- Accept: application/json
+- Method : POST<br>
+- Body Example: 
+```sql
+email TEXT NOT NULL
+```
+Response Type:
+```
+BOOLEAN
+```
+Response (if success):
+```jsx
+{
+    "status": 0,
+    "message": "success",
+    "data": true
+}
+```
+
+### Au5. enableUser <br> 
+- URL : https://api-smartlock.woowmoment.com/api/auth/enableUser<br>
+- Accept: application/json
+- Method : POST<br>
+- Body Example: 
+```sql
+uid TEXT NOT NULL
+```
+Response Type:
+```
+BOOLEAN
+```
+Response (if success):
+```jsx
+{
+    "status": 0,
+    "message": "success",
+    "data": true
+}
+```
+
+### Au6. disableUser <br> 
+- URL : https://api-smartlock.woowmoment.com/api/auth/disableUser<br>
+- Accept: application/json
+- Method : POST<br>
+- Body Example: 
+```sql
+uid TEXT NOT NULL
 ```
 Response Type:
 ```
