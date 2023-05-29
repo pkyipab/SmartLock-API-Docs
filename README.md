@@ -23,7 +23,7 @@ Last Updates : 2023-05-18
 + Added I16.updateUserCompanyId
 + Added Cloud Function (6) onShareDeviceDeleteTrigger for removing in `users` -> `devices` -> `friendMap`. Excute when `shareDevices` Object deleted.
 
-! Modified Au1.createUserByEmailAndPassword : allows insert companyId when creation. 
+! Modified Au1.createUserByEmailAndPassword : allows insert companyID when creation. 
 ! Modified I13.getUserDevices : returns `documentId` (i.e. device's id)
 ```
 
@@ -95,7 +95,7 @@ $ firebase deploy --only functions --debug
 email TEXT NOT NULL
 password TEXT NOT NULL
 name TEXT NOT NULL
-companyId TEXT COMMENT 'Refers to company owner uid : if null -> create a company User with his own UID, otherwise add the company's UID to the new user'
+companyID TEXT COMMENT 'Refers to company owner uid : if null -> create a company User with his own UID, otherwise add the company's UID to the new user'
 ```
 Response Type:
 ```
@@ -302,11 +302,11 @@ Response (if success):
         "nicWifiMacAddress": null,
         "manufacturerDate": null,
         "modelNo": "BG-PL-1338",
-        "adminkey": null,
+        "adminKey": null,
         "defaultkey": "5788F13A4914DFDBD31CCF5FAA173096",
         "token": null,
         "userkey": null,
-        "companyId": "A01",
+        "companyID": "A01",
         "qrCode": "002C0C9CCF697248D940D20C0B0ED576F851B27159D6B136",
         "imei": null,
         "btMacAddress": "F4:04:4C:18:10:EA",
@@ -335,11 +335,11 @@ Response (if success):
         "nicWifiMacAddress": null,
         "manufacturerDate": null,
         "modelNo": "BG-PL-1338",
-        "adminkey": null,
+        "adminKey": null,
         "defaultkey": "5788F13A4914DFDBD31CCF5FAA173096",
         "token": null,
         "userkey": null,
-        "companyId": "A01",
+        "companyID": "A01",
         "qrCode": "002C0C9CCF697248D940D20C0B0ED576F851B27159D6B136",
         "imei": null,
         "btMacAddress": "F4:04:4C:18:10:EA",
@@ -388,7 +388,7 @@ Response (if success):
 - Method : POST<br>
 - Body Example: 
 ```sql
-companyId TEXT NOT NULL 
+companyID TEXT NOT NULL 
 ```
 - Response:
 ```
@@ -405,11 +405,11 @@ Response (if success):
       nicWifiMacAddress: null,
       manufacturerDate: null,
       modelNo: "BG-PL-1338",
-      adminkey: null,
+      adminKey: null,
       defaultkey: "5788F13A4914DFDBD31CCF5FAA173096",
       token: null,
       userkey: null,
-      companyId: "A01",
+      companyID: "A01",
       qrCode: "002C0C9CCF697248D940D20C0B0ED576F851B27159D6B136",
       imei: null,
       btMacAddress: "F4:04:4C:18:10:EA",
@@ -445,11 +445,11 @@ Response (if success):
           nicWifiMacAddress: null,
           manufacturerDate: null,
           modelNo: "BG-PL-1338",
-          adminkey: null,
+          adminKey: null,
           defaultkey: "5788F13A4914DFDBD31CCF5FAA173096",
           token: null,
           userkey: null,
-          companyId: "A01",
+          companyID: "A01",
           qrCode: "002C0C9CCF697248D940D20C0B0ED576F851B27159D6B136",
           imei: null,
           btMacAddress: "F4:04:4C:18:10:EA",
@@ -1565,7 +1565,7 @@ Response (if success):
 - Body: 
 ```sql
 userId TEXT NOT NULL
-companyId TEXT NOT NULL
+companyID TEXT NOT NULL
 ```
 Response Type:
 ```
